@@ -6,17 +6,15 @@ body {
     min-height: 100vh;
     margin: 0;
     
-    /* SETTING BACKGROUND GAMBAR KAMU */
     background-image: url('background_web_idul_fitri_2026.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-color: #f0f4f0; /* Warna cadangan */
+    background-color: #f0f4f0; 
 }
 
 .card {
-    /* Efek Kaca Transparan agar Background Canva Terlihat */
     background: rgba(255, 255, 255, 0.85); 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -29,7 +27,6 @@ body {
     width: 85%;
     border: 1px solid rgba(255, 255, 255, 0.4);
     
-    /* Animasi muncul halus */
     animation: fadeIn 1s ease-out;
 }
 
