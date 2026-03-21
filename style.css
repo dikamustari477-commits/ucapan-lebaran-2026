@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    
+    /* SETTING BACKGROUND GAMBAR KAMU */
+    background-image: url('background_web_idul_fitri_2026.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #f0f4f0; /* Warna cadangan */
+}
+
+.card {
+    /* Efek Kaca Transparan agar Background Canva Terlihat */
+    background: rgba(255, 255, 255, 0.85); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    padding: 3rem 2rem;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 85%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    
+    /* Animasi muncul halus */
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 { color: #1b4332; font-size: 1.8rem; margin-bottom: 10px; }
+h3 { color: #2d6a4f; font-size: 1.4rem; margin: 10px 0; font-weight: 700; }
+
+.sub-pesan {
+    font-size: 1.1rem;
+    color: #40916c;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(45, 106, 79, 0.2);
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+input:focus {
+    border-color: #2d6a4f;
+    outline: none;
+    box-shadow: 0 0 10px rgba(45, 106, 79, 0.2);
+}
+
+button {
+    background: #2d6a4f;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+button:hover { background: #1b4332; transform: scale(1.02); }
+button:disabled { background: #95a5a6; }
+
+.btn-back {
+    display: inline-block;
+    margin-top: 25px;
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.ornamen { font-size: 3.5rem; margin-bottom: 10px; }
+hr { border: 0; border-top: 1px dashed #adc178; margin: 20px 0; }
+.pesan { font-style: italic; color: #1b4332; line-height: 1.5; }

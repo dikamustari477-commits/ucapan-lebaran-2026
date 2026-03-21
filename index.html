@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idul Fitri 2026 - Kirim Ucapan</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="card">
+        <div class="ornamen">🌙</div>
+        <h1>Selamat Datang</h1>
+        <p>Masukkan nama & email untuk mendapatkan kartu ucapan otomatis.</p>
+        
+        <form id="idul-fitri-form">
+            <input type="text" name="nama" id="user_name" placeholder="Nama Lengkap Anda" required>
+            <input type="email" name="email_tujuan" id="user_email" placeholder="Alamat Email Anda" required>
+            <button type="submit" id="btn-kirim">Konfirmasi & Kirim</button>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("UZnZiZaXoLu0B-5tS"); // GANTI DENGAN PUBLIC KEY KAMU
+        })();
+
+        document.getElementById('idul-fitri-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const btn = document.getElementById('btn-kirim');
+            const nama = document.getElementById('user_name').value;
+
+            btn.innerText = 'Sedang Mengirim...';
+            btn.disabled = true;
+
+            emailjs.sendForm('service_h9bbdrn', 'template_9yhvjqe', this)
+                .then(function() {
+                    window.location.href = `launch.html?nama=${encodeURIComponent(nama)}`;
+                }, function(error) {
+                    alert('Maaf, pengiriman gagal: ' + JSON.stringify(error));
+                    btn.innerText = 'Konfirmasi & Kirim';
+                    btn.disabled = false;
+                });
+        });
+    </script>
+</body>
+</html>

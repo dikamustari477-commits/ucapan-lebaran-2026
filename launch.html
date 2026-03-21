@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Idul Fitri 1447H</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="ornamen">🕌</div>
+        <h1>Selamat Hari Raya <br> Idul Fitri</h1>
+        
+        <h3 id="displayNama">Untuk Anda</h3>
+        <p class="sub-pesan">Serta seluruh keluarga besar.</p>
+        
+        <hr>
+        <p class="pesan">"Mohon maaf lahir dan batin atas segala kekhilafan."</p>
+        
+        <a href="index.html" class="btn-back">← Buat Ucapan Lain</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const nama = params.get('nama');
+        if (nama) {
+            document.getElementById('displayNama').innerText = "Untuk " + decodeURIComponent(nama);
+        }
+    </script>
+</body>
+</html>
